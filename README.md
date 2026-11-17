@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pontual Balanças — Site Institucional
 
-## Getting Started
+Site institucional de alta conversão e SEO local desenvolvido para a **Pontual Balanças** (Uberlândia - MG), com base nas diretrizes do briefing oficial.
 
-First, run the development server:
+## 🚀 Tecnologias Utilizadas
+- **Next.js 16 (App Router)** com TypeScript
+- **Tailwind CSS v4**
+- **Lucide Icons**
+- **Schema.org (LocalBusiness JSON-LD)**
+- **Static Site Generation (SSG)** para velocidade máxima e indexação no Google
+
+---
+
+## 📂 Arquitetura de Páginas
+
+| Rota | Página | Descrição |
+|---|---|---|
+| `/` | Início | Hero de conversão, credenciais (desde 2008, 4.9 Google), 4 balanças prioritárias, caminhão INMETRO, formulário e depoimentos reais. |
+| `/balancas` | Catálogo | Visão geral das balanças de grande porte. |
+| `/balancas/rodoviaria` | Balança Rodoviária | Pesagem de caminhões e carretas, aplicações agrícolas/industriais, FAQs e CTA. |
+| `/balancas/industrial` | Balança Industrial | Balanças de fluxo contínuo, piso e suspensas (RDA / homologadas INMETRO). |
+| `/balancas/ferroviaria` | Balança Ferroviária | Pesagem de vagões em terminais e usinas. |
+| `/balancas/gado` | Balança para Gado | Troncos e barras de pesagem eletrônica (COIMMA e Tru-Test/Datamars). |
+| `/servicos` | Serviços | Venda (novas e seminovas), montagem, conserto e destaque do caminhão munck com pesos padrão INMETRO em campo. |
+| `/segmentos` | Segmentos | Soluções dedicadas para Fazendas, Confinamentos, Indústrias, Frigoríficos e Reciclagem. |
+| `/sobre` | Sobre Nós | Quase 18 anos de história em Uberlândia, fotos reais da oficina, caminhão e equipe. |
+| `/contato` | Contato | Telefones clicáveis, WhatsApp comercial, horário, mapa do Google e formulário. |
+| `/politica-de-privacidade` | LGPD | Política de Privacidade e Proteção de Dados Pessoais. |
+| `/sitemap.xml` | Sitemap | Mapa do site para indexação nos mecanismos de busca. |
+| `/robots.txt` | Robots | Diretivas para robôs de indexação. |
+
+---
+
+## ⚙️ Centralização de Configurações
+
+Todos os telefones, WhatsApps, endereços, horários e textos institucionais estão centralizados em:
+`src/config/company.ts`
+
+Ao atualizar esse arquivo, todos os cabeçalhos, rodapés, botões flutuantes, esquemas de SEO e mensagens pré-preenchidas são atualizados automaticamente em todo o site.
+
+---
+
+## 🛠️ Como Executar o Projeto
 
 ```bash
+# Entrar na pasta do projeto
+cd "pontual_balancas"
+
+# Instalar dependências (caso necessário)
+npm install
+
+# Modo de Desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Gerar Build de Produção
+npm run build
+
+# Executar Servidor de Produção
+npm run start
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
